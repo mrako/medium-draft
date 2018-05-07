@@ -3,7 +3,7 @@
   "version": "0.5.6",
   "description": "A medium like rich text editor built upon draft-js with an emphasis on eliminating mouse usage by adding relevant keyboard shortcuts",
   "main": "lib/index.js",
-  "repository": "https://github.com/brijeshb42/medium-draft",
+  "repository": "https://github.com/mrako/medium-draft",
   "scripts": {
     "start": "npm run dev",
     "clean": "rm -f dist/*.js && rm -f dist/*.css && rm -rf lib",
@@ -14,6 +14,7 @@
     "buildExporter": "NODE_ENV=production APP_EXPORT_TYPE=exporter webpack --progress --colors",
     "buildImporter": "NODE_ENV=production APP_EXPORT_TYPE=importer webpack --progress --colors",
     "npm": "npm run build && npm run buildExporter && npm run buildImporter && npm run babel && npm run copyCss",
+    "preinstall": "npm run npm",
     "prepublish": "npm run npm",
     "test:lint": "./node_modules/.bin/eslint ./src/ --ext .js --ext .jsx --ignore-path .gitignore --cache",
     "test:unit": "NODE_PATH=src babel-node ./node_modules/.bin/isparta cover _mocha -- --growl --compilers js:babel-core/register,css:test-js/css-null-compiler.js --require ./test-js/test_helper.js $(find src -path '*.spec.js')",
@@ -26,7 +27,7 @@
     "draft-js",
     "wysiwyg"
   ],
-  "author": "Brijesh Bittu <brijeshb42@gmail.com> (http://bitwiser.in/)",
+  "author": "",
   "license": "MIT",
   "dependencies": {
     "draft-js": "^0.10.0",
@@ -78,7 +79,7 @@
     "webpack-dev-server": "^2.2.0"
   },
   "bugs": {
-    "url": "https://github.com/brijeshb42/medium-draft/issues"
+    "url": "https://github.com/mrako/medium-draft/issues"
   },
   "homepage": "http://bitwiser.in/medium-draft/"
 }
